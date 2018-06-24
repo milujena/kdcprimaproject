@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.kdcprima.qa.ExtentReportListener.ExtentReport;
 import com.kdcprima.qa.baseLib.BaseTest;
+import com.kdcprima.qa.pages.HomePage;
 import com.kdcprima.qa.pages.LogInPage;
 
 
@@ -19,14 +20,16 @@ public class LoginTest extends BaseTest{
 	{
 	
 		LogInPage lp=new LogInPage(driver);
-		System.out.println("hi");
 	
-	//lp.verifyTitle(loginPageTitle);
+	lp.verifyTitle(loginPageTitle);
 	lp.user_name("milu123");
 	lp.pass_word("milu123");
 	lp.login_btn();
-	//lp.verifyTitle(HomePageTitle);
-	System.out.println("bye");
+	lp.verifyTitle(HomePageTitle);
+
+
+	
+	
 	}
 
 }

@@ -1,7 +1,11 @@
 package com.kdcprima.qa.util;
 
+
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+
+import com.kdcprima.qa.baseLib.BaseTest;
 
 public class TestUtils {
 
@@ -40,6 +44,11 @@ public class TestUtils {
     {
     	Select sel=new Select(element);
     	sel.isMultiple();
+    }
+    public static void moveToElement(WebElement element)
+    {
+    	Actions act=new Actions(BaseTest.driver);
+    			act.moveToElement(element).perform();
     }
 
 

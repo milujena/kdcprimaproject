@@ -17,12 +17,14 @@ public class HomePage extends BasePage{
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath="//a[.='Calendar']")
-	private WebElement claender;
+	@FindBy(xpath="//div[@id='navmenu']//descendant::a[text()='Contacts']")
+	public WebElement contacts;
 	
-	public void clender_module()
+	@FindBy(xpath="//div[@id='navmenu']//descendant::a[text()='New Contact']")
+	private WebElement newcontact;
+	public void new_contact()
 	{
-		claender.clear();
+		contacts.click();
 	}
 
 }
