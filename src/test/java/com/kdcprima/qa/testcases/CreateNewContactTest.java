@@ -22,9 +22,9 @@ public class CreateNewContactTest extends BaseTest
 		lp.login_btn();
 
 		HomePage hm=new HomePage(driver);
-		//TestUtils.moveToElement(hm.contacts);
+		TestUtils.moveToElement(hm.contacts);
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click()", hm.contacts);
+		js.executeScript("arguments[0].click()", hm.newcontact);
 		
 		
 	}

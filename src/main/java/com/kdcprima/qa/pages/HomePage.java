@@ -21,10 +21,7 @@ public class HomePage extends BasePage{
 	public WebElement contacts;
 	
 	@FindBy(xpath="//div[@id='navmenu']//descendant::a[text()='New Contact']")
-	private WebElement newcontact;
-	public void new_contact()
-	{
-		contacts.click();
-	}
+	public  WebElement newcontact;
+	
 
 }
