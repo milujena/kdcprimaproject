@@ -1,7 +1,5 @@
 package com.kdcprima.qa.testcases;
 
-import org.openqa.selenium.JavascriptException;
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 import com.kdcprima.qa.baseLib.BaseTest;
@@ -20,11 +18,13 @@ public class CreateNewContactTest extends BaseTest
 		lp.user_name("milu123");
 		lp.pass_word("milu123");
 		lp.login_btn();
-
 		HomePage hm=new HomePage(driver);
-		TestUtils.moveToElement(hm.contacts);
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click()", hm.newcontact);
+		driver.switchTo().frame("mainpanel");
+		
+
+		TestUtils.moveToElement(hm.contactsLink);
+		hm.new_contactLink();
+		
 		
 		
 	}

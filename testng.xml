@@ -6,7 +6,9 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.kdcprima.qa.testcases.LoginTest"/>
+    <class name="com.kdcprima.qa.testcases.LoginTest"/>
+      <class name="com.kdcprima.qa.testcases.CreateNewContactTest"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

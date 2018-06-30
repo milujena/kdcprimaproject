@@ -9,8 +9,8 @@ import com.kdcprima.qa.baseLib.BaseTest;
 
 public class TestUtils {
 
-	public static long PAGE_LOAD_TIMEOUT=20;
-	public static long IMPLICITY_WAIT=10;
+	public static long PAGE_LOAD_TIMEOUT=40;
+	public static long IMPLICITY_WAIT=40;
 	
 	public static void selectByIndex(WebElement element, int n)
 	{
